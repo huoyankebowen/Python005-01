@@ -1,0 +1,4 @@
+ALTER  TABLE  `Table1`  ADD  INDEX index1 (  `id`,  name`  );
+ALTER  TABLE  `Table2`  ADD  INDEX index2 (  `id`,  name`  );
+增加索引后速度增加，因为id匹配可以利用索引，查询name字段也可以防止回表增加速度
+where语句和select语句可以利用到索引就可以增加速度

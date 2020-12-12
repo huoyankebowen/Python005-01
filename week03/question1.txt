@@ -1,0 +1,19 @@
+vi my.cnf
+[client]
+default_character_set = utf8mb4
+[mysql]
+default_character_set = utf8mb4
+character_set_server = utf8mb4
+
+init_connect = 'set names utf8mb4'
+collation_server = utf8mb4_unicode_ci
+
+systemctl stop mysqld.service
+systemctl start mysqld.service
+
+mysql -uroot -p
+
+MYSQL>show variables like '%character%';
+MYSQL>show variables like '%collation_%';
+
+MYSQL> GRANT ALL PRIVILEGES ON testdb.* TO 'testuser'@'%' IDENTIFIED BY '';
