@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>comments</title>
+</head>
+<body>
+    <div>        
+        <table>
+            <tr>
+                <th>星级</th>
+                <th>评论</th>
+            </tr>
+            {% for comment in comments%}            
+            <tr>
+                <td style="width:50px;">{{ comment.star }}</td>
+                <td>{{ comment.comment }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </div>
+</body>
